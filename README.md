@@ -22,7 +22,7 @@ API RESTful para gerenciamento de clientes, produtos, pedidos e integração com
 ### Instalação
 
 ```bash
-git clone https://github.com/seuusuario/lu-estilo-api.git
+git clone https://github.com/Ancelotti-Dev/lu-estilo-api.git
 cd lu-estilo-api
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate no Windows
@@ -101,6 +101,3 @@ Configure as variáveis `ZAPI_INSTANCE_ID` e `ZAPI_TOKEN` no `.env` para ativar 
 
 Pull requests são bem-vindos!
 
----
-
-`Acesse a documentação Swagger em http://localhost:8000/docs`
