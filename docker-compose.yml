@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sua_senha
+      POSTGRES_DB: amr
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  api:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://postgres:sua_senha@db:5432/amr
+      SECRET_KEY: sua_chave_secreta
+      ZAPI_INSTANCE_ID: seu_id
+      ZAPI_TOKEN: seu_token
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+volumes:
+  pgdata:
